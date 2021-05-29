@@ -91,16 +91,17 @@ class Dataset:
         print(accuracy_score(Y_validation, predictions))
         print(confusion_matrix(Y_validation, predictions))
         print(classification_report(Y_validation, predictions))
+        
 
-        path = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
-        names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
-        ds = Dataset(path, names)
-        ds.get_shape()
-        ds.get_first_20()
-        ds.describe()
-        ds.plot_box(2, 2)
-        ds.plot_hist()
-        ds.plot_scatter()
-        ds.evaluate(4, 10)
+path = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
+names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
+ds = Dataset(path, names)
+ds.get_shape()
+ds.get_first_20()
+ds.describe()
+ds.plot_box(2, 2)
+ds.plot_hist()
+ds.plot_scatter()
+ds.evaluate(4, 10)
 
 
